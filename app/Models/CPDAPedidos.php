@@ -12,10 +12,11 @@ class CPDAPedidos extends Model
     protected $table = 'cpda_pedidos';
 
     protected $fillable = [
-        'tipo', 
-        'horaspro', 
-        'fecha', 
-        'fecaprov', 
+        'tipo_venta',
+        'horas_apro',
+        'fecha',
+        'fecaprov',
+        'fecha_fulfill',
         'quien_cae_venta',
         'estado',
         'axlp_estado_aprobacion',
@@ -24,8 +25,17 @@ class CPDAPedidos extends Model
         'numdoc',
         'total',
         'cliente',
-        'controlw',
-        'boddestino'
+        'control_wms',
+        'bodega_destino',
+        'rol',
+        'origen',
+        'estado_combinado',
+        'estado_combinado_url',
+        'clase'
     ];
+
+    public function factura(){
+        return $this->belongsTo(Factura::class, 'num_pedido');
+    }
 
 }

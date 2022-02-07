@@ -8,12 +8,14 @@
         "php": "^7.3|^8.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "jeroennoten/laravel-adminlte": "^3.7",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.4",
         "netsuitephp/netsuite-laravel": "^1.0",
-        "ryanwinchester/netsuite-php": "^2021.2"
+        "ryanwinchester/netsuite-php": "^2021.2",
+        "tightenco/ziggy": "^1.4"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

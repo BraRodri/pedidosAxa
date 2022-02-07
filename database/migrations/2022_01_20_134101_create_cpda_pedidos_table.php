@@ -16,20 +16,26 @@ class CreateCpdaPedidosTable extends Migration
         Schema::connection('pgsql')->create('cpda_pedidos', function (Blueprint $table) {
             $table->id();
 
-            $table->string('tipo');
-            $table->decimal('horaspro', 12, 2);
+            $table->string('tipo_venta');
+            $table->decimal('horas_apro', 12, 2);
             $table->date('fecha');
             $table->string('fecaprov');
+            $table->string('fecha_fulfill');
             $table->text('quien_cae_venta');
             $table->string('estado');
             $table->string('axlp_estado_aprobacion');
             $table->text('bodega');
             $table->string('metodo_pago');
             $table->string('numdoc');
-            $table->decimal('total', 1000, 2);
+            $table->string('total');
             $table->text('cliente');
-            $table->string('controlw');
-            $table->string('boddestino')->nullable();
+            $table->string('control_wms');
+            $table->string('bodega_destino')->nullable();
+            $table->string('rol');
+            $table->string('origen');
+            $table->text('estado_combinado');
+            $table->text('estado_combinado_url');
+            $table->string('clase')->nullable();
 
             $table->timestamps();
         });
